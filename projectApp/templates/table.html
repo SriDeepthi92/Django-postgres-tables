@@ -1,0 +1,79 @@
+
+{% extends "base.html" %}
+
+{% block title %}Tables{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h2>GP Table</h2>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Record_field </th>
+                <th>Entry</th>
+                <th>check_gp</th>
+                <th>name1</th>
+                <th>pedigree</th>
+                <th>experiment_name</th>
+                <th>location</th>
+                <th>year</th>
+                <th>kgha</th>
+                <th>protein</th>
+                <th>lw</th>
+                <th>pm_f</th>
+                <th>female</th>
+                <th>male</th>
+                <th>ripe</th>
+                <th>strl</th>
+                <th>head_1</th>
+                <th>yr</th>
+                <th>protein_h</th>
+                <th>lodging</th>
+                <th>falling_number</th>
+                <th>gluten_index</th>
+                <th>cadmium</th>
+                <th>fus_ge</th>
+                <th>zeleny</th>
+                <th>selection</th>
+                <th>head</th>
+                <th>gpdb_id</th>
+    
+            </tr>
+        </thead>
+        <tbody>
+            {% for column in columns %}
+            <tr>
+                <td>{{ column.record_field  }}</td>
+                <td>{{ column.entry }}</td>
+                <td>{{ column.check_gp }}</td>
+                <td>{{ column.name1 }}</td>
+                <td>{{ column.pedigree }}</td>
+                <td>{{ column.experiment_name }}</td>
+                <td>{{ column.location }}</td>
+                <td>{{ column.year }}</td>
+                <td>{{ column.kgha }}</td>
+                <td>{{ column.protein }}</td>
+                <td>{{ column.lw }}</td>
+                <td>{{ column.pm_f }}</td>
+                <td>{{ column.female }}</td>
+                <td>{{ column.male }}</td>
+                <td>{{ column.ripe }}</td>
+                <td>{{ column.strl }}</td>
+                <td>{{ column.head_1 }}</td>
+                <td>{{ column.yr }}</td>
+                <td>{{ column.protein_h }}</td>
+                <td>{{ column.lodging }}</td>
+                <td>{{ column.falling_number }}</td>
+                <td>{{ column.gluten_index }}</td>
+                <td>{{ column.cadmium }}</td>
+                <td>{{ column.fus_ge }}</td>
+                <td>{{ column.zeleny }}</td>
+                <td>{{ column.selection }}</td>
+                <td>{{ column.head }}</td>
+                <td>{{ column.gpdb_id }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+    {% endblock %}
